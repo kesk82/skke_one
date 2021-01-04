@@ -1,0 +1,8 @@
+body {
+    background: #ccc;
+    font-family: sans-serif;
+}
+
+.nav-link-current {
+    font-weight: 700;
+}
