@@ -2,24 +2,25 @@
   get_header();
 ?>
 
-<main>
-
 <?php
 
 while (have_posts()) {
-  the_post(); ?>
+  the_post();
+  $post_cats = get_the_category(); ?>
   
-  <article>
+  <article id="post-<?php echo get_the_ID(); ?>" <?php post_class(); ?>>
   <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
-  <div><?php the_content(); ?></div>
+  <?php the_content(); ?>
   </article>
   
   <?php } // while have_posts()
 
 ?>
 
-</main>
+  <div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
+  <div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+
 
 <?php
   get_footer();

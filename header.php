@@ -1,22 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="<?php bloginfo('charset'); ?>">
+  <meta name="description" content="...">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title><?php wp_title('|', true,'right'); ?><?php bloginfo('name'); ?></title>
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/main.css?<?php echo time(); ?>">
 </head>
-<body>
-  <header>
-    <h1><a href="<?php echo site_url(); ?>">Start Seite</a></h1>
-    <nav>
-      <ul>
-        <li class="nav-link<?php echo is_page('seite1') ? ' nav-link-current' : ''; ?>">
-          <a href="<?php echo site_url("/seite1"); ?>">Seite 1</a>
-        </li>
-        <li class="nav-link<?php echo is_category('cat1') ? ' nav-link-current' : ''; ?>">
-          <a href="<?php echo get_category_link(get_category_by_slug('cat1')); ?>">Category 1</a>
-        </li>
-      </ul>
-    </nav>
+<body <?php body_class(); ?>>
+  <header id="main-header">
+    <div class="page-width">
+      <h1 class="page-title"><a href="<?php echo site_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+    </div>
   </header>
+  <main id="main-content">
