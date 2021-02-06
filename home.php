@@ -2,10 +2,16 @@
 
 get_header();
 
+/*
+ * Der Inhalt der Seite mit dem slug 'startseite' wird hier ausgegeben.
+ * 
+ * */
 $pages = get_posts(array(
   'fields' => 'ids',
   'post_type' => 'page',
-  'name' => 'startseite'
+  'name' => 'startseite',
+  'posts_per_page' => 1,
+  'paged' => 1
 ));
 
 $current_page = intval(get_query_var('paged'));

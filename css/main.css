@@ -105,74 +105,47 @@ html {
 }
 
 body {
-    background: #c0d6df;
-    color: #333;
+    background: #000;
+    color: #fff;
     font-family: 'Open Sans';
     margin: 0;
     padding: 0;
 }
 
-#main-header {
-  background: #2274a5;
-  overflow: hidden;
-  text-shadow: 0 0 24px #2d3142, 0 0 6px rgba(0,0,0,.5);
+a {
+  color: #eee;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration:none;
+  outline: 1px dotted #666;
+}
+
+p {
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h1 a, h2 a, h3 a, h4 a, h5 a {
+  font-weight: 700;
+  font-family: 'Open Sans Condensed';
   color: #fff;
-  padding: 0 0 200px;
-  box-shadow: 0 0 15px 0 rgba(0,0,0,.5), 0 0 6px 1px #2d3142;
 }
 
-#main-header .page-title {
-  font-size: 3rem;
-  margin: .3em 0 .7em;
+code, pre {
+  font-family: 'Inconsolata';
 }
 
-#main-header a {
-  color: #fff;
-}
-
-#main-content {
-  margin: -180px 0 50px;
-  padding: 20px;
-  background: #fff;
-  border: none;
-  overflow: hidden;
-  box-shadow: 0 0 12px 0 rgba(0,0,0,.2), 0 0 6px 0 rgba(0,0,0,.5);
-}
-
-@media only screen and (min-width: 600px) {
-  #main-content {
-    margin: -180px 30px 50px;
-    border-radius: 2px;
-  }
-}
-@media only screen and (min-width: 800px) {
-  #main-content {
-    margin: -180px 40px 50px;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  #main-content {
-    margin: -180px auto 50px;
-    max-width: 1200px;
-  }
-}
-
-.page-width {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-@media only screen and (min-width: 1280px) {
-  .page-width {
-    padding: 0;
-  }
-}
-
-#main-content::after {
+img {
   display: block;
-  content: ' ';
-  float: none;
-  clear: both;
+  margin: 0 auto;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.wp-caption {
+  max-width: 100%;
 }
 
 #post-comments {
@@ -241,163 +214,3 @@ body {
   border-radius: 6px;
 }
 
-#main-footer {
-  background: #2d3142;
-  color: #fff;
-  overflow: hidden;
-  margin: 0;
-  padding: 20px;
-  box-shadow: 0 999px 0 999px #2d3142;
-}
-
-#main-footer a {
-  color: #fff;
-}
-
-a {
-  color: #000;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration:none;
-  outline: 1px dotted #666;
-}
-
-.startseite-content {
-  margin: 0;
-  padding: 1rem 2rem;
-  background: #fff;
-  font-size: 125%;
-}
-
-.artikel-liste {
-  margin: 3rem 0;
-  padding: 1rem;
-}
-
-.alignleft {
-  float: left;
-}
-
-.alignright {
-  float: right;
-}
-
-.aligncenter {
-  display: block;
-  margin: 0 auto;
-}
-
-p {
-  line-height: 1.5;
-}
-
-h1, h2, h3, h4, h5, h1 a, h2 a, h3 a, h4 a, h5 a {
-  font-weight: 700;
-  font-family: 'Open Sans Condensed';
-  color: #9c0d38;
-}
-
-code, pre {
-  font-family: 'Inconsolata';
-}
-
-img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-}
-
-div.more-link-container {
-  border-top: 3px solid lightsalmon;
-  text-align: center;
-  background: #eee;
-  padding-bottom: 10px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-a.more-link {
-  display: inline-block;
-  border: 1px solid lightsalmon;
-  background: lightsalmon;
-  padding: .5rem;
-  color: #000;
-  font-weight: 700;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-a.more-link:hover {
-  outline: none;
-}
-
-.child-categories {
-  border-top: solid 2px lightpink;
-  border-bottom: solid 2px lightpink;
-  margin: 1rem 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.child-categories > div {
-  margin: .5em;
-}
-
-.child-categories > div > a {
-  display: inline-block;
-  padding: .5em;
-  border: 1px solid purple;
-  background: peachpuff;
-  box-shadow: 0 0 4px 0 rgba(0,0,0,.3);
-}
-
-.artikel-liste {
-  border-top: 3px double red;
-}
-
-.artikel {
-  margin: 5rem 0;
-}
-
-.artikel-full {
-  margin: 2rem 0;
-}
-@media only screen and (min-width: 600px) {
-  .artikel-full {
-    margin: 2rem 0;
-    padding: 1rem;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .artikel-full {
-    margin: 0;
-    padding: 3rem;
-  }
-}
-
-.artikel-title {
-  text-transform: uppercase;
-  font-size: 2rem;
-  margin: 0 0 1em;
-}
-
-.breadcrumb {
-  margin-top: -.5em;
-  line-height: 2;
-  text-indent: -1em;
-  padding-left: 1em;
-}
-
-.breadcrumb a {
-  color: #9c0d38;
-  font-weight: 700;
-}
-
-.wp-caption {
-  max-width: 100%;
-}
