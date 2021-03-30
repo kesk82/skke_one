@@ -28,15 +28,24 @@ if ($current_page < 2 && isset($pages[0])) {
 <?php
 while (have_posts()) {
   the_post();
-  $post_cats = get_the_category(); ?>
+  $post_cats = get_the_category();
+  $imgID = get_post_thumbnail_id($post->ID);
+  ?>
   
-  <div class="artikel-bild">xxx</div>
+  <?php if($imgID) { ?>
+    <div class="artikel-bild"><?php echo get_the_post_thumbnail(); ?></div>
+  <?php } ?>
   <article id="post-<?php echo get_the_ID(); ?>" <?php post_class('artikel'); ?>>
   <h2 class="artikel-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
   <?php the_content('alles lesen ...'); ?>
   </article>
-  <div class="artikel-meta">xxx</div>
+  <div class="artikel-meta">
+    <?php if($imgID) { ?>
+      <div class="artikel-bild-unten"><?php echo get_the_post_thumbnail(); ?></div>
+    <?php } ?>
+    <div class="artikel-meta-inhalt">xxx</div>
+  </div>
   
   <?php } // while have_posts()
 

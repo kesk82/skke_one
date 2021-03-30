@@ -105,8 +105,8 @@ html {
 }
 
 body {
-  background: #000;
-  color: #fff;
+  background: rgb(27, 52, 68);
+  color: #333;
   font-family: 'Open Sans';
   margin: 0;
   padding: 0;
@@ -159,7 +159,9 @@ img {
 #main-header {
   padding: .2rem;
   margin: 0 0 1rem 0;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #333;
+  background-color: rgb(24, 24, 31);
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
 }
 
 #main-header h1 {
@@ -195,39 +197,73 @@ nav.child-categories {
 }
 
 .artikel {
-  border: 1px solid #555;
+  border: 1px solid #333;
   border-radius: .5rem;
   padding: 1rem;
   margin: 1rem 0;
-  box-shadow: 0 0 10px 0 #fff;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
   position: relative;
   z-index: 2;
   background-color: #000;
+  color: #fff;
 }
 
 .artikel-bild {
-  border-left: 1px solid #555;
-  border-right: 1px solid #555;
-  border-top: 1px solid #555;
+  border-left: 1px solid #333;
+  border-right: 1px solid #333;
+  border-top: 1px solid #333;
+  background-color: rgba(0,0,0,.7);
   border-radius: .5rem .5rem 0 0;
   margin: 1.5rem auto -1rem auto;
   max-width: calc( 100% - 1rem );
-  padding: .5rem;
+  padding: 0;
+  overflow: hidden;
   position: relative;
-  box-shadow: 0 0 10px 0 #fff;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+  height: 300px;
+}
+
+.artikel-bild img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* object-position: center bottom; */
 }
 
 .artikel-meta {
-  border-left: 1px solid #555;
-  border-right: 1px solid #555;
-  border-bottom: 1px solid #555;
+  border-left: 1px solid #333;
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
   border-radius: 0 0 .5rem .5rem;
   margin: -1rem auto 1rem auto;
   max-width: calc( 100% - 1rem );
-  padding: .5rem;
+  padding: 0;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 0 10px 0 #fff;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+  color: #fff;
+}
+
+.artikel-meta .artikel-bild-unten {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.artikel-meta .artikel-bild-unten img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+.artikel-meta-inhalt {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(0,0,0,.7);
+  padding: .5rem;
 }
 
 #post-comments {
