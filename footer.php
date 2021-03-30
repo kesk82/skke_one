@@ -1,3 +1,4 @@
+    </div>
   </main>
   <footer id="main-footer">
     <div class="page-width">

@@ -105,11 +105,11 @@ html {
 }
 
 body {
-    background: #000;
-    color: #fff;
-    font-family: 'Open Sans';
-    margin: 0;
-    padding: 0;
+  background: #000;
+  color: #fff;
+  font-family: 'Open Sans';
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -134,6 +134,7 @@ h1, h2, h3, h4, h5, h1 a, h2 a, h3 a, h4 a, h5 a {
 
 code, pre {
   font-family: 'Inconsolata';
+  overflow-x:scroll;
 }
 
 img {
@@ -147,6 +148,60 @@ img {
 .wp-caption {
   max-width: 100%;
 }
+
+.page-width {
+  max-width: 800px;
+  padding: 0;
+  margin: 0 auto;
+  overflow:hidden;
+}
+
+
+#main-header {
+  padding: .2rem;
+  margin: 0 0 1rem 0;
+  border-bottom: 1px solid #aaa;
+}
+
+#main-header h1 {
+  text-transform:uppercase;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #bbb;
+}
+
+#main-content {
+  padding: 0;
+  margin: 0;
+}
+
+#main-footer {
+  border-top: 1px solid #aaa;
+  padding: .2rem;
+  margin: 1rem 0 0 0;
+}
+
+
+nav.child-categories {
+  border: 3px solid red;
+  padding: 10px;
+  margin: 10px;
+}
+
+
+.artikel-liste {
+  border: 1px solid white;
+}
+
+.artikel {
+  border: 3px solid #bbb;
+  padding: 5px;
+  margin: 5px;
+}
+
 
 #post-comments {
   border-top: 3px double #aaa;

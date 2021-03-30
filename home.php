@@ -23,22 +23,6 @@ if ($current_page < 2 && isset($pages[0])) {
   echo '</article>';
 }
 
-$child_categories = get_terms(array(
-  'taxonomy' => 'category',
-  'hide_empty' => true,
-  'parent' => 0
-));
-
-if (is_array($child_categories) && count($child_categories) > 0) {
-  echo '<nav class="child-categories">';
-  foreach ($child_categories as $child_category) {
-    echo '<div>';
-    echo '<a href="' . get_category_link($child_category->term_id)  . '">' . $child_category->name . '</a>';
-    echo '</div>';
-  }
-  echo '</nav>';
-}
-
 ?>
 <div class="artikel-liste">
 <?php

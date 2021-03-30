@@ -9,8 +9,9 @@
 </head>
 <body <?php body_class(); ?>>
   <header id="main-header">
-    <div class="page-width">
-      <h1 class="page-title"><a href="<?php echo site_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-    </div>
+    <a href="<?php echo site_url(); ?>">
+      <h1 class="page-title"><?php bloginfo('name'); ?></h1>
+    </a>
   </header>
   <main id="main-content">
+    <div class="page-width">
