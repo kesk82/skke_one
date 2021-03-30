@@ -30,11 +30,13 @@ while (have_posts()) {
   the_post();
   $post_cats = get_the_category(); ?>
   
+  <div class="artikel-bild">xxx</div>
   <article id="post-<?php echo get_the_ID(); ?>" <?php post_class('artikel'); ?>>
   <h2 class="artikel-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
   <?php the_content('alles lesen ...'); ?>
   </article>
+  <div class="artikel-meta">xxx</div>
   
   <?php } // while have_posts()
 

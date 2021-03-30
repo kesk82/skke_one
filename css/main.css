@@ -153,7 +153,6 @@ img {
   max-width: 800px;
   padding: 0;
   margin: 0 auto;
-  overflow:hidden;
 }
 
 
@@ -170,6 +169,10 @@ img {
   line-height: 1;
   font-size: 1rem;
   font-weight: 700;
+  color: #bbb;
+}
+
+#main-header a {
   color: #bbb;
 }
 
@@ -191,17 +194,41 @@ nav.child-categories {
   margin: 10px;
 }
 
-
-.artikel-liste {
-  border: 1px solid white;
-}
-
 .artikel {
-  border: 3px solid #bbb;
-  padding: 5px;
-  margin: 5px;
+  border: 1px solid #555;
+  border-radius: .5rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 0 10px 0 #fff;
+  position: relative;
+  z-index: 2;
+  background-color: #000;
 }
 
+.artikel-bild {
+  border-left: 1px solid #555;
+  border-right: 1px solid #555;
+  border-top: 1px solid #555;
+  border-radius: .5rem .5rem 0 0;
+  margin: 1.5rem auto -1rem auto;
+  max-width: calc( 100% - 1rem );
+  padding: .5rem;
+  position: relative;
+  box-shadow: 0 0 10px 0 #fff;
+}
+
+.artikel-meta {
+  border-left: 1px solid #555;
+  border-right: 1px solid #555;
+  border-bottom: 1px solid #555;
+  border-radius: 0 0 .5rem .5rem;
+  margin: -1rem auto 1rem auto;
+  max-width: calc( 100% - 1rem );
+  padding: .5rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 10px 0 #fff;
+}
 
 #post-comments {
   border-top: 3px double #aaa;
