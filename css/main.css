@@ -106,7 +106,7 @@ html {
 
 body {
   background: rgb(27, 52, 68);
-  color: #333;
+  color: #fff;
   font-family: 'Open Sans';
   margin: 0;
   padding: 0;
@@ -183,6 +183,12 @@ img {
   margin: 0;
 }
 
+#main-content::after {
+  display: block;
+  content: ' ';
+  clear: both;
+}
+
 #main-footer {
   border-top: 1px solid #aaa;
   padding: .2rem;
@@ -196,7 +202,7 @@ nav.child-categories {
   margin: 10px;
 }
 
-.artikel {
+.artikel, .artikel-full {
   border: 1px solid #333;
   border-radius: .5rem;
   padding: 1rem;
@@ -206,6 +212,12 @@ nav.child-categories {
   z-index: 2;
   background-color: #000;
   color: #fff;
+}
+
+.artikel-title {
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid #555;
 }
 
 .artikel-bild {
@@ -260,6 +272,9 @@ nav.child-categories {
 }
 
 .artikel-meta-inhalt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   position: relative;
   z-index: 2;
   background-color: rgba(0,0,0,.7);
@@ -332,3 +347,10 @@ nav.child-categories {
   border-radius: 6px;
 }
 
+.alignleft {
+  float: left;
+}
+
+.alignright {
+  float: right;
+}

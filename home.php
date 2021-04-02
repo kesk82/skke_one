@@ -44,7 +44,7 @@ while (have_posts()) {
     <?php if($imgID) { ?>
       <div class="artikel-bild-unten"><?php echo get_the_post_thumbnail(); ?></div>
     <?php } ?>
-    <div class="artikel-meta-inhalt">xxx</div>
+    <div class="artikel-meta-inhalt"><?php skke_print_loop_item_cat_breadcrumb(); ?> <div class="post-date"><?php echo get_the_date(); ?></div></div>
   </div>
   
   <?php } // while have_posts()
@@ -52,8 +52,8 @@ while (have_posts()) {
 ?>
 </div>
 
-<div class="nav-previous alignleft"><?php next_posts_link( '&laquo; Older posts' ); ?></div>
-<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts &raquo;' ); ?></div>
+<div class="nav-previous alignleft"><?php next_posts_link( '&laquo; Ältere Beiträge' ); ?></div>
+<div class="nav-next alignright"><?php previous_posts_link( 'Neuere Beiträge &raquo;' ); ?></div>
 
 <?php
 

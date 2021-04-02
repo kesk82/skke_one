@@ -18,8 +18,8 @@ while (have_posts()) {
 
 ?>
 
-  <div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
-  <div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+  <div class="nav-previous alignleft"><?php next_posts_link( 'Ältere Beiträge' ); ?></div>
+  <div class="nav-next alignright"><?php previous_posts_link( 'Neuere Beiträge' ); ?></div>
 
 
 <?php

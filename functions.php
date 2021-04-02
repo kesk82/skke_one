@@ -111,6 +111,28 @@ function skke_print_cat_tree($cat, $seperator='&raquo;') {
   return $o;
 }
 
+function skke_print_loop_item_cat_breadcrumb($seperator='&raquo;') {
+  global $post;
+
+  if ($post && 'post' == get_post_type()) {
+
+    $o = '<div class="post-cat-breadcrumb">';
+    if ('post' == get_post_type()) {
+      $post_cats = get_the_category($post->ID);
+     
+      if (isset($post_cats[0])) {
+        if ($post_cats[0]->parent !== 0) {
+          $o .= skke_print_cat_tree($post_cats[0]);
+        }
+        $o .= '<a href="' . get_category_link($post_cats[0]->term_id) . '">' . $post_cats[0]->name . '</a>';
+      }
+    }
+    $o .= '</div>';
+
+    echo $o;
+  }
+}
+
 function skke_print_breadcrumb($seperator='&raquo;') {
   global $post;
 
@@ -123,7 +145,7 @@ function skke_print_breadcrumb($seperator='&raquo;') {
     $o .= '<span><strong>' . get_the_title() . '</strong></span>';
   }
 
-  elseif (is_single() && 'post' == get_post_type()) {
+  elseif ((is_single()) && 'post' == get_post_type()) {
     $post_cats = get_the_category($post->ID);
    
     if (isset($post_cats[0])) {
